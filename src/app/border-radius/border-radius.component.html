@@ -1,0 +1,95 @@
+<div class="main">
+  <div class="first">
+    <h3>Border Radius</h3>
+    <label>Top Left</label>
+    <mat-slider
+      class="example-margin"
+      max="50"
+      min="0"
+      step="1"
+      sdiscrete="true"
+    >
+      <input
+        matSliderThumb
+        [ngModel]="left"
+        (ngModelChange)="onChange($event)"
+        #slider
+      />
+    </mat-slider>
+    <input type="number" [ngModel]="left" (ngModelChange)="onChange($event)" />
+    <label> Top Right</label>
+    <mat-slider
+      class="example-margin"
+      max="50"
+      min="0"
+      step="1"
+      sdiscrete="true"
+    >
+      <input
+        matSliderThumb
+        [ngModel]="right"
+        (ngModelChange)="onChange2($event)"
+        #slider
+      />
+    </mat-slider>
+    <input
+      type="number"
+      [ngModel]="right"
+      (ngModelChange)="onChange2($event)"
+    />
+    <label>Bottom Right</label>
+    <mat-slider
+      class="example-margin"
+      max="50"
+      min="0"
+      step="1"
+      sdiscrete="true"
+    >
+      <input
+        matSliderThumb
+        [ngModel]="bottom"
+        (ngModelChange)="onChange3($event)"
+        #slider
+      />
+    </mat-slider>
+    <input
+      type="number"
+      [ngModel]="bottom"
+      (ngModelChange)="onChange3($event)"
+    />
+    <label>Bottom Left</label>
+    <mat-slider
+      class="example-margin"
+      max="50"
+      min="0"
+      step="1"
+      sdiscrete="true"
+    >
+      <input
+        matSliderThumb
+        [ngModel]="top"
+        (ngModelChange)="onChange4($event)"
+        #slider
+      />
+    </mat-slider>
+    <input type="number" [ngModel]="top" (ngModelChange)="onChange4($event)" />
+  </div>
+  <div class="second">
+    <div
+      [ngStyle]="{
+          'border-radius': borderRadius,
+        }"
+      class="box"
+    >
+      Have fun!
+    </div>
+  </div>
+</div>
+<div class="codeCopy">
+  <h3>Code to copy</h3>
+  <pre>
+    <code>
+      border-radius: {{borderRadius}};
+  </code>
+</pre>
+</div>

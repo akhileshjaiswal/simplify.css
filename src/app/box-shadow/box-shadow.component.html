@@ -1,0 +1,106 @@
+<div class="main">
+  <div class="first">
+    <h3>Box Shadow</h3>
+    <label>Move Left / Right</label>
+    <mat-slider
+      class="example-margin"
+      max="50"
+      min="-50"
+      step="1"
+      sdiscrete="true"
+    >
+      <input
+        matSliderThumb
+        [ngModel]="leftS"
+        (ngModelChange)="onChange($event)"
+        #slider
+      />
+    </mat-slider>
+    <input type="number" [ngModel]="leftS" (ngModelChange)="onChange($event)" />
+    <label>Move Top / Bottom</label>
+    <mat-slider
+      class="example-margin"
+      max="50"
+      min="-50"
+      step="1"
+      sdiscrete="true"
+    >
+      <input
+        matSliderThumb
+        [ngModel]="rightS"
+        (ngModelChange)="onChange2($event)"
+        #slider
+      />
+    </mat-slider>
+    <input
+      type="number"
+      [ngModel]="rightS"
+      (ngModelChange)="onChange2($event)"
+    />
+    <label>Spread</label>
+    <mat-slider
+      class="example-margin"
+      max="50"
+      min="0"
+      step="1"
+      sdiscrete="true"
+    >
+      <input
+        matSliderThumb
+        [ngModel]="spread"
+        (ngModelChange)="onChange3($event)"
+        #slider
+      />
+    </mat-slider>
+    <input
+      type="number"
+      [ngModel]="spread"
+      (ngModelChange)="onChange3($event)"
+    />
+    <label>Thickness</label>
+    <mat-slider
+      class="example-margin"
+      max="50"
+      min="0"
+      step="1"
+      sdiscrete="true"
+    >
+      <input
+        matSliderThumb
+        [ngModel]="thickness"
+        (ngModelChange)="onChange4($event)"
+        #slider
+      />
+    </mat-slider>
+    <input
+      type="number"
+      [ngModel]="thickness"
+      (ngModelChange)="onChange4($event)"
+    />
+    <br />
+    <label>Shadow color: {{ shadowColor }}</label>
+    <input
+      type="color"
+      [ngModel]="shadowColor"
+      (ngModelChange)="onChange5($event)"
+    />
+  </div>
+  <div class="second">
+    <div
+      [ngStyle]="{
+          'box-shadow': boxShadow,
+        }"
+      class="box"
+    >
+      Have fun!
+    </div>
+  </div>
+</div>
+<div class="codeCopy">
+  <h3>Code to copy</h3>
+  <pre>
+      <code>
+        box-shadow: {{boxShadow}};
+    </code>
+  </pre>
+</div>
