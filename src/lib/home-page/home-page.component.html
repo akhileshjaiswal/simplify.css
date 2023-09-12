@@ -1,0 +1,5 @@
+<div class="product-container">
+  <mat-card *ngFor="let product of productList" [routerLink]="product.url">
+    <mat-card-content>{{ product.label }}</mat-card-content>
+  </mat-card>
+</div>
